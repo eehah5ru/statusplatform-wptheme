@@ -130,7 +130,6 @@ h2 {
       .sidebar { order: 2; }
     }
 
-
     // ... and to the left on medium-up screens, when using the sidebar-left template
     @include breakpoint(medium) {
       .main-content { order: 2; }
