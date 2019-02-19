@@ -1,0 +1,36 @@
+.srp-gallery {
+  @extend .orbit;
+
+  ul {
+    @extend .orbit-container;
+
+    li {
+      @extend .orbit-slide;
+
+      figure {
+        @extend .orbit-figure;
+
+        img {
+          @extend .orbit-image;
+
+          height: auto;
+          width: 100%;
+        }
+
+        figcaption {
+          @extend .orbit-caption;
+
+          position: relative;
+          color: black;
+          background: none;
+
+          font-size: 13px;
+          color: #555d66;
+          margin-top: .5em;
+          margin-bottom: 1em;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
