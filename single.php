@@ -15,7 +15,7 @@ get_header();?>
     <aside class="sidebar <?php echo srp_get_post_format(); ?>">      
       <?php get_template_part( 'template-parts/aside', srp_aside_tpl() ); ?>
     </aside>      
-		<main class="main-content">
+		<main class="main-content <?php echo srp_get_post_format(); ?>">
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'template-parts/content', '' ); ?>
 				<?php // the_post_navigation(); ?>
