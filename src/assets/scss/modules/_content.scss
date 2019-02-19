@@ -25,6 +25,11 @@
       border: 2px solid $blue;
     }
 
+    &.active {
+      border: 2px solid $blue;
+      color: $blue;
+    }
+
     &:last-of-type {
       margin-right: 0;
     }

@@ -2,8 +2,8 @@
 
 <?php if (!empty($authors)): ?>
   <div class="authors">
-    <?php foreach ( $authors as $author) :  ?>
-      <a class="author"><?php echo trim($author); ?></a>
+    <?php foreach ( $authors as $author) : $author_page = get_page_by_title(trim($author),  "OBJECT", 'post'); ?>
+      <a class="author" href="<?php echo post_permalink($author_page->ID); ?>"><?php echo trim($author); ?></a>
     <?php endforeach; ?>
   </div>
 <?php endif; ?>
@@ -13,7 +13,7 @@
 <?php $tags = get_the_tags(); if ( $tags ) { ?>
   <p cass="tags">
     <?php foreach($tags as $tag) {?>
-      <a class="tag"><?php echo trim($tag->name); ?></a>
+      <a class="tag" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo trim($tag->name); ?></a>
     <?php } ?>
   </p>
 <?php } ?>

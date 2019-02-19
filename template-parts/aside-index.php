@@ -7,7 +7,7 @@
 <?php $tags = get_tags(); if ( $tags ) { ?>
   <p cass="tags">
     <?php foreach($tags as $tag) {?>
-      <a class="tag"><?php echo trim($tag->name); ?></a>
+      <a class="tag <?php if(is_tag() && (get_queried_object()->term_id == $tag->term_id)): echo "active"; endif; ?>" href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo trim($tag->name); ?></a>
     <?php } ?>
   </p>
 <?php } ?>
