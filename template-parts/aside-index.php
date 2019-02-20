@@ -2,7 +2,7 @@
 
 <h2><a href="<?php srp_the_permalink_by_path('community'); ?>"><?php pll_e('Community'); ?></a></h2>
 
-<h2 class="search"><?php pll_e('Search'); ?></h2>
+<?php get_search_form(); ?>
 
 <?php $tags = get_tags(); if ( $tags ) { ?>
   <p cass="tags">

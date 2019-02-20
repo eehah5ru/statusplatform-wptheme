@@ -33,4 +33,19 @@ $(".srp-gallery figure").addClass("orbit-figure");
 $(".srp-gallery img").addClass("orbit-image");
 $(".srp-gallery figcaption").addClass("orbit-caption");
 
+//
+//
+// END: WP GALLERY
+//
+//
+
+//
+//
+// SEARCH
+//
+//
+
+$("form#searchform input").before('<span class="search-dash">|</span>');
+
+
 $(document).foundation();

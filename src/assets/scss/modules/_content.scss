@@ -90,6 +90,7 @@
   }
 }
 
+// FIXME: DEPRECATED
 @mixin search-field {
   &.search {
     color: $gray;
@@ -286,11 +287,11 @@ h2 {
     h2 {
       margin-bottom: 1rem;
 
-      &:last-of-type {
-        margin-bottom: 2rem;
-      }
+      // &:last-of-type {
+      //   margin-bottom: 0.7rem;
+      // }
 
-      @include search-field;
+      // @include search-field;
     }
   }
 

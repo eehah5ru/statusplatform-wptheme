@@ -1,0 +1,39 @@
+form#searchform {
+  .input-group-button {
+    display: none;
+  }
+
+  .search-dash {
+    @include huge-header;
+    color: $black;
+    padding-right: 6px;
+  }
+
+  input {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    line-height: $paragraph-lineheight;
+
+    color: $gray;
+
+    @include huge-header;
+
+    &:before {
+      content: "|";
+      color: $black;
+    }
+  }
+}
+
+
+#menuModal form#searchform {
+  .search-dash {
+    @include giant-header;
+  }
+
+  input {
+    @include giant-header;
+  }
+}

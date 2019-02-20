@@ -42,7 +42,7 @@
               <h1><a href="/"><?php pll_e('Home'); ?></a></h1>
               <h1><a href="<?php srp_the_permalink_by_path('about'); ?>"><?php pll_e('About'); ?></a></h1>
               <h1><a href="<?php srp_the_permalink_by_path('community'); ?>"><?php pll_e('Community'); ?></a></h1>
-              <h1 class="search"><?php pll_e('Search'); ?></h1>
+              <?php get_search_form(); ?>
             </nav>
 
             <nav class="bottom-links">
