@@ -49,7 +49,7 @@
               <div class="bottom-links-container">
                 <h3><a href="mailto:info@statusproject.net"><?php pll_e('Contact us'); ?></a></h3>
                 <h3><a><?php pll_e('Disclaimer'); ?></a></h3>
-                <h3><a><?php pll_e('Terms of Use'); ?></a></h3>
+                <h3><a href="<?php srp_the_permalink_by_path('terms-of-use'); ?>"><?php pll_e('Terms of Use'); ?></a></h3>
               </div>
             </nav>
           </div>
