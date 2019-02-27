@@ -45,18 +45,24 @@
 
 @mixin huge-header {
     font-family: $header-font-family;
-    font-size: 36px;
+    font-size: 48px;
     text-transform: uppercase;
 
 }
 
 @mixin large-header {
     font-family: $header-font-family;
-    font-size: 30px;
+    font-size: 36px;
     text-transform: uppercase;
 }
 
 @mixin big-header {
+    font-family: $header-font-family;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+@mixin normal-header {
   font-family: $header-font-family;
   font-size: 18px;
   text-transform: none;
@@ -108,11 +114,11 @@
 //
 //
 h1 {
-  @include giant-header;
+  @include huge-header;
 }
 
 h2 {
-  @include huge-header;
+  @include large-header;
 }
 
 .main-container {
@@ -148,6 +154,22 @@ h2 {
   // MAIN CONTENT
   //
   //
+
+  //
+  // HEADER
+  //
+  .main-content > header {
+    @include xy-cell(12);
+
+  }
+
+  //
+  // PAGE-CONTENT
+  //
+
+  .page-content {
+    @include xy-cell(12);
+  }
 
   //
   // COMMON
@@ -214,7 +236,7 @@ h2 {
       }
 
       h3 {
-        @include big-header;
+        @include normal-header;
 
         margin-top: 0.5rem;
       }
@@ -293,6 +315,13 @@ h2 {
 
       // @include search-field;
     }
+
+    //
+    // SEARCH SIDEBAR
+    //
+    &.search {
+      padding-top: 0.75rem;
+    }
   }
 
 
@@ -307,6 +336,8 @@ h2 {
 
     font-family: $header-font-family;
     font-size: 24px;
+
+    padding-top: 1rem;
 
 
     .authors {

@@ -58,7 +58,7 @@ nav.menu-sign a {
     }
 
     h3 {
-      @include large-header;
+      @include big-header;
     }
 
     nav.lang-switch {
@@ -67,7 +67,7 @@ nav.menu-sign a {
       text-align: right;
 
       ul {
-        @include large-header;
+        @include big-header;
 
         list-style: none;
 

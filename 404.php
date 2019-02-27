@@ -9,7 +9,10 @@
 get_header(); ?>
 
 <div class="main-container">
-	<div class="main-grid">
+	<div class="main-grid sidebar-left">
+    <aside class="sidebar index">
+      <?php get_template_part( 'template-parts/aside', 'index' ); ?>
+    </aside>    
 		<main class="main-content">
 			<article>
 				<header>
@@ -40,7 +43,6 @@ get_header(); ?>
 				</div>
 			</article>
 		</main>
-		<?php get_sidebar(); ?>
 	</div>
 </div>
 <?php get_footer();

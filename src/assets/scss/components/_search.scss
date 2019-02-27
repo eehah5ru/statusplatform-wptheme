@@ -4,7 +4,7 @@ form#searchform {
   }
 
   .search-dash {
-    @include huge-header;
+    @include large-header;
     color: $black;
     padding-right: 6px;
   }
@@ -18,7 +18,7 @@ form#searchform {
 
     color: $gray;
 
-    @include huge-header;
+    @include large-header;
 
     &:before {
       content: "|";

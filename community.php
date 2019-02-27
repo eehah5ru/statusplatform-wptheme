@@ -16,6 +16,7 @@ get_header(); ?>
       <?php while (have_posts()) : the_post(); ?>
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
       <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
     </aside>
     <main class="main-content community">
       <h2><?php pll_e('People'); ?></h2>
@@ -23,6 +24,7 @@ get_header(); ?>
       <?php while (have_posts()) : the_post(); ?>
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
       <?php endwhile; ?>
+      <?php wp_reset_postdata(); ?>
     </main>
   </div>
 </div>
