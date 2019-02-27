@@ -284,7 +284,15 @@ h2 {
     }
   }
 
+  //
+  // COMMUNITY / MAIN CONTENT
+  //
   .main-content.community {
+    padding-top: 0.75rem;
+
+    h2 {
+      @include large-header;
+    }
     h3 {
       text-decoration: underline;
     }
@@ -371,6 +379,8 @@ h2 {
   // COMMUNITY SIDEBAR
   //
   .sidebar.community {
+    padding-top: 0.75rem;
+
     h3 {
       text-decoration: underline;
     }
@@ -381,10 +391,11 @@ h2 {
   //
   .sidebar.person,
   .sidebar.group {
+    padding-top: 0.75rem;
     font-family: $header-font-family;
 
     h2 {
-      @include huge-header;
+      @include large-header;
 
       text-decoration: underline;
       text-transform: uppercase;
@@ -395,6 +406,12 @@ h2 {
 
     }
 
+    h1.community-link,
+    h1.community-link a {
+      @include large-header;
+    }
+
+    .community-link,
     .people,
     .groups {
       margin-bottom: 3rem;

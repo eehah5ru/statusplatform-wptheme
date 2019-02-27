@@ -1,3 +1,4 @@
+<h1 class="community-link"><a href="<?php srp_the_permalink_by_path('community'); ?>"><?php pll_e('Community'); ?>:</a></h1>
 <h2 class="<?php echo("group" == srp_get_post_format() ? 'active' : ''); ?>">
   GROUPS
 </h2>
