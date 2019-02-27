@@ -209,6 +209,7 @@ h2 {
   //
   .main-content.index {
     @include xy-grid();
+    padding-top: 2.85rem;
 
     article.preview {
       @include xy-cell(6);
@@ -305,6 +306,8 @@ h2 {
   //
   .sidebar.index {
     @include tags-block;
+
+    padding-top: 0.75rem;
 
     h2 {
       margin-bottom: 1rem;

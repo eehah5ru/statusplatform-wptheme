@@ -39,7 +39,7 @@
             </nav>
             
             <nav class="links">
-              <h1><a href="/"><?php pll_e('Home'); ?></a></h1>
+              <h1><a href="<?php srp_the_permalink_by_path('home'); ?>"><?php pll_e('Home'); ?></a></h1>
               <h1><a href="<?php srp_the_permalink_by_path('about'); ?>"><?php pll_e('About'); ?></a></h1>
               <h1><a href="<?php srp_the_permalink_by_path('community'); ?>"><?php pll_e('Community'); ?></a></h1>
               <?php get_search_form(); ?>
@@ -48,7 +48,7 @@
             <nav class="bottom-links">
               <div class="bottom-links-container">
                 <h3><a href="mailto:info@statusproject.net"><?php pll_e('Contact us'); ?></a></h3>
-                <h3><a><?php pll_e('Disclaimer'); ?></a></h3>
+                <!-- <h3><a><?php pll_e('Disclaimer'); ?></a></h3> -->
                 <h3><a href="<?php srp_the_permalink_by_path('terms-of-use'); ?>"><?php pll_e('Terms of Use'); ?></a></h3>
               </div>
             </nav>

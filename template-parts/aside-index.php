@@ -1,3 +1,5 @@
+<h2 class="home-link"><a href="<?php srp_the_permalink_by_path('home'); ?>"><?php pll_e('Home'); ?></a></h2>
+
 <h2><a href="<?php srp_the_permalink_by_path('about'); ?>"><?php pll_e('About'); ?></a></h2>
 
 <h2><a href="<?php srp_the_permalink_by_path('community'); ?>"><?php pll_e('Community'); ?></a></h2>
