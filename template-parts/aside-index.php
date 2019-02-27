@@ -4,7 +4,11 @@
 
 <h2><a href="<?php srp_the_permalink_by_path('community'); ?>"><?php pll_e('Community'); ?></a></h2>
 
+<h2><a href="https://www.facebook.com/Status-Research-Platform-282185609116550/" target="_blank">FB</a> | <a hre="https://vimeo.com/user95253593" target="_blank">Vimeo</a></h2>
+
 <?php get_search_form(); ?>
+
+
 
 <?php $tags = get_tags(); if ( $tags ) { ?>
   <p cass="tags">

@@ -53,6 +53,10 @@ nav.menu-sign a {
     @extend .grid-y;
     @extend .grid-frame;
 
+    h1 {
+      @include giant-header;
+    }
+
     h2.search {
       @include search-field;
     }
@@ -63,7 +67,7 @@ nav.menu-sign a {
 
     nav.lang-switch {
       @extend .cell;
-      @extend .medium-3;
+      @extend .medium-1;
       text-align: right;
 
       ul {
