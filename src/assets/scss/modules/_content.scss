@@ -219,7 +219,7 @@ h2 {
       border: 2px solid $black;
       text-align: center;
 
-      margin-bottom: map-get($grid-margin-gutters, medium);
+      margin-bottom: map-get($grid-margin-gutters, small);
 
       @include breakpoint(medium) {
         margin-bottom: map-get($grid-margin-gutters, medium);
@@ -257,6 +257,20 @@ h2 {
   //
   //
   .main-content-full-width.about {
+    @include xy-grid();
+
+    header {
+      @extend .cell;
+      @extend .small-12;
+      @extend .medium-8;
+
+      @extend .medium-offset-4;
+
+      @include breakpoint(medium) {
+        padding-left: map-get($grid-margin-gutters, small);
+      }
+
+    }
     .entry-content {
       @include xy-grid-container(auto, 0);
 
@@ -348,7 +362,7 @@ h2 {
     font-family: $header-font-family;
     font-size: 24px;
 
-    padding-top: 1rem;
+    padding-top: 1.7rem;
 
 
     .authors {
