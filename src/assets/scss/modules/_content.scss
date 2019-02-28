@@ -556,7 +556,18 @@ h2 {
       &.active {
         text-decoration: none
       }
+    }
 
+    header.small-title {
+      @include hide-for(medium);
+
+      h2 {
+        text-decoration: none;
+      }
+
+      a {
+        text-decoration: underline;
+      }
     }
 
     h1.community-link,
@@ -564,10 +575,17 @@ h2 {
       @include large-header;
     }
 
+    .groups-label,
+    .people-label {
+      @include show-for(medium)
+    }
+
     .community-link,
     .people,
     .groups {
       margin-bottom: 3rem;
+
+      @include show-for(medium)
 
       a {
         font-size: 30px;
