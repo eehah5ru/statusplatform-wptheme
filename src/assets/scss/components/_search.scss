@@ -29,11 +29,17 @@ form#searchform {
 
 
 #menuModal form#searchform {
-  .search-dash {
-    @include giant-header;
+  .search-dash,
+  input {
+    @include large-header;
+
+    @include breakpoint(medium) {
+      @include giant-header;
+    }
+
   }
 
-  input {
-    @include giant-header;
-  }
+  // input {
+  //   @include giant-header;
+  // }
 }

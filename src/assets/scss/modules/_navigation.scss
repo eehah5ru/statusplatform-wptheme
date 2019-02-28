@@ -63,8 +63,28 @@ nav.menu-sign a {
     @extend .grid-y;
     @extend .grid-frame;
 
+    @include breakpoint(small only) {
+      @include xy-cell(12);
+      width: 100%;
+
+    }
+
     h1 {
-      @include giant-header;
+      @include large-header;
+
+      @include breakpoint(small only) {
+        margin-bottom: 0;
+      }
+
+      @include breakpoint(medium) {
+        @include giant-header;
+      }
+
+      a {
+        @include breakpoint(small only) {
+          text-decoration: underline;
+        }
+      }
     }
 
     h2.search {
@@ -72,16 +92,34 @@ nav.menu-sign a {
     }
 
     h3 {
-      @include big-header;
+      @include normal-header;
+      text-transform: uppercase;
+
+      @include breakpoint(medium) {
+        @include big-header;
+        text-transform: none;
+      }
+
     }
 
     nav.lang-switch {
       @extend .cell;
       @extend .medium-1;
+      @extend .small-2;
+
       text-align: right;
 
+      @include breakpoint(small only) {
+        padding-top: 2rem;
+      }
+
       ul {
-        @include big-header;
+        @include normal-header;
+        text-transform: uppercase;
+
+        @include breakpoint(medium) {
+          @include big-header;
+        }
 
         list-style: none;
 
@@ -90,7 +128,9 @@ nav.menu-sign a {
 
           &:last-of-type {
             &:before {
-              @include large-header;
+              @include breakpoint(medium) {
+                @include large-header;
+              }
               content: " / "
             }
           }
@@ -111,7 +151,11 @@ nav.menu-sign a {
 
       text-align: right;
 
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+
+      @include breakpoint(medium) {
+        margin-bottom: 2rem;
+      }
 
       .bottom-links-container {
         position: absolute;
