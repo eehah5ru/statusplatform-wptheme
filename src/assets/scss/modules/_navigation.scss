@@ -27,6 +27,7 @@ nav.menu-sign a {
   left: 0;
 
   @include breakpoint(medium) {
+    width: 300%;
     transform: rotate(90deg);
     transform-origin: 0% 100%;
     top: -40px;
