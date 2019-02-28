@@ -9,7 +9,7 @@ get_header(); ?>
 
 <div class="main-container">
     <div class="main-grid sidebar-left">
-    <aside class="sidebar index">
+    <aside class="sidebar index home">
       <?php get_template_part( 'template-parts/aside', 'index' ); ?>
     </aside>
         <main class="main-content index">

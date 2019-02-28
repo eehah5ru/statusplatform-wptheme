@@ -10,16 +10,26 @@
 
   a.tag {
     font-family: $header-font-family;
-    font-size: 18px;
+    font-size: 16px;
     border: 2px solid $black;
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
     border-radius: 2rem;
-    margin-right: 0.8rem;
+    margin-right: 0.4rem;
     display: inline-block;
     margin-bottom: 0.5rem;
+
+
+    @include breakpoint(medium) {
+      font-size: 18px;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      margin-right: 0.8rem;
+    }
 
     &:hover {
       border: 2px solid $blue;
@@ -27,7 +37,13 @@
 
     &.active {
       border: 2px solid $blue;
-      color: $blue;
+      background-color: $blue;
+      color: $white;
+
+      @include breakpoint(medium) {
+        border: 2px solid $blue;
+        color: $blue;
+      }
     }
 
     &:last-of-type {
@@ -52,8 +68,12 @@
 
 @mixin large-header {
     font-family: $header-font-family;
-    font-size: 36px;
+    font-size: 32px;
     text-transform: uppercase;
+
+    @include breakpoint(medium) {
+      font-size: 36px;
+    }
 }
 
 @mixin big-header {
@@ -69,9 +89,7 @@
 }
 
 @mixin main-content {
-  @include breakpoint(small) {
-    @include xy-cell(12);
-  }
+  @include xy-cell(12);
 
   @include breakpoint(medium) {
     @include xy-cell(8);
@@ -86,13 +104,10 @@
 }
 
 @mixin sidebar-content {
-  @include breakpoint(small) {
-    @include xy-cell(12);
-  }
+  @include xy-cell(12);
 
   @include breakpoint(medium) {
     @include xy-cell(4);
-    // margin-top: 1rem;
   }
 }
 
@@ -122,31 +137,26 @@ h2 {
 }
 
 .main-container {
-  @include xy-grid-container;
+  @extend .grid-container;
+  @extend .full;
 
-  margin-left: 4rem;
+  @include breakpoint(medium) {
+    margin-left: 4rem;
+  }
 }
 
 
 .main-grid {
-  @include xy-grid();
+  @include xy-grid;
+
   margin-top: 1rem;
 
-  @include breakpoint(medium) {
+  .main-content {
+    @extend .small-order-2;
   }
 
-  &.sidebar-left {
-    // Place the sidebar below main content on small screens ...
-    @include breakpoint(small) {
-      .main-content { order: 1; }
-      .sidebar { order: 2; }
-    }
-
-    // ... and to the left on medium-up screens, when using the sidebar-left template
-    @include breakpoint(medium) {
-      .main-content { order: 2; }
-      .sidebar { order: 1; }
-    }
+  .sidebar {
+    @extend .small-order-1;
   }
 
   //
@@ -159,32 +169,34 @@ h2 {
   // HEADER
   //
   .main-content > header {
-    @include xy-cell(12);
+    @extend .cell;
+    @extend .small-12;
 
   }
 
   //
   // PAGE-CONTENT
   //
-
   .page-content {
-    @include xy-cell(12);
+    @extend .cell;
+    @extend .small-12;
   }
 
   //
   // COMMON
   //
   .main-content {
-    margin-left: 0;
-
     @include main-content;
+
+    margin-left: 0;
   }
 
   //
   // FULL WIDTH
   //
   .main-content-full-width {
-    @include xy-cell(12);
+    @extend .cell;
+    @extend .small-12;
   }
 
 
@@ -212,11 +224,26 @@ h2 {
   // MAIN CONTENT INDEX
   //
   .main-content.index {
-    @include xy-grid();
-    padding-top: 2.85rem;
+    @include xy-grid;
+
+    padding-top: 0;
+
+    @include breakpoint(small only) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    @include breakpoint(medium) {
+      padding-top: 2.85rem;
+    }
 
     article.preview {
-      @include xy-cell(6);
+      @include xy-cell(12);
+
+      @include breakpoint(medium) {
+        @include xy-cell(6);
+      }
 
       // margin: 1rem;
       padding: 0.5rem;
@@ -336,13 +363,28 @@ h2 {
     padding-top: 0.75rem;
 
     h2 {
-      margin-bottom: 1rem;
+
+      margin-bottom: 0;
+
+      a {
+        text-decoration: underline;
+      }
+
+
+      @include breakpoint(medium) {
+        margin-bottom: 1rem;
+        a {
+          text-decoration: none;
+        }
+
+      }
+
+
 
       // &:last-of-type {
       //   margin-bottom: 0.7rem;
       // }
 
-      // @include search-field;
     }
 
     //
@@ -350,6 +392,14 @@ h2 {
     //
     &.search {
       padding-top: 0.75rem;
+    }
+
+    &.home {
+      h2.home-link {
+        @include breakpoint(small only) {
+           display: none;
+        }
+      }
     }
   }
 
