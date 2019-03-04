@@ -109,10 +109,13 @@
 
 @mixin large-header {
     font-family: $header-font-family;
-    font-size: 32px;
+    font-size: 31px;
     text-transform: uppercase;
     line-height: 1.2;
 
+    @include breakpoint(330) {
+      font-size: 32px;
+    }
     @include breakpoint(medium) {
       font-size: 36px;
     line-height: 1.4;
@@ -181,6 +184,19 @@
   }
 }
 
+
+//
+//
+// BODY
+//
+//
+body {
+  padding-top: 1rem;
+
+  @include breakpoint(medium) {
+    padding-top: 0;
+  }
+}
 
 //
 //
