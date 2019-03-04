@@ -7,24 +7,33 @@
 //
 // menu sign
 //
-nav.menu-sign a {
+nav.menu-sign {
   position: fixed;
   font-family: $header-font-family;
-  -webkit-user-select: none;  /* Chrome all / Safari all */
-  -moz-user-select: none;     /* Firefox all */
-  -ms-user-select: none;
-  user-select: none;
   line-height: 0.6;
   letter-spacing: 1.5px;
-
-  text-shadow: gray 2px 2px 2px;
 
   font-size: 18px;
   text-align: center;
   width: 100%;
-  color: $blue;
   top: 1rem;
   left: 0;
+
+  a {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
+    user-select: none;
+
+    color: $blue;
+    text-shadow: gray 2px 2px 2px;
+
+    &:hover {
+      text-decoration: line-through;
+      color: $blue;
+    }
+  }
+
 
   @include breakpoint(medium) {
     width: 300%;
@@ -33,17 +42,18 @@ nav.menu-sign a {
     top: -40px;
     left: 0;
     font-size: 60px;
-    color: $black;
+
     text-align: left;
-    text-shadow: gray 2px -2px 3px;
+
+
+    a {
+      text-shadow: gray 2px -2px 3px;
+      color: $black;
+    }
   }
 
-  &:hover {
-    text-decoration: line-through;
-    color: $blue;
-  }
 
-  &.in-menu {
+  &.in-menu a {
     text-decoration: line-through;
     color: $blue;
   }

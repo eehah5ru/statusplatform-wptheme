@@ -116,9 +116,10 @@
     @include breakpoint(330) {
       font-size: 32px;
     }
-    @include breakpoint(medium) {
+
+    @include breakpoint(998) {
       font-size: 36px;
-    line-height: 1.4;
+      line-height: 1.4;
     }
 }
 
@@ -597,7 +598,7 @@ h2 {
   //
   .sidebar.person,
   .sidebar.group {
-    padding-top: 0.75rem;
+    // padding-top: 0.75rem;
     font-family: $header-font-family;
 
     h2 {
@@ -616,6 +617,8 @@ h2 {
 
       h2 {
         text-decoration: none;
+        display: inline-block;
+
       }
 
       a {
@@ -638,7 +641,7 @@ h2 {
     .groups {
       margin-bottom: 3rem;
 
-      @include show-for(medium)
+      @include show-for(medium);
 
       a {
         font-size: 30px;
