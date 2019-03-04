@@ -218,8 +218,13 @@ body {
     @include huge-header;
   }
 
-  figure figcaption {
-    text-align: left;
+
+  figure {
+    text-align: center;
+
+    figcaption {
+      text-align: left;
+    }
   }
 
   iframe {

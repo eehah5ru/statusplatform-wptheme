@@ -1,6 +1,14 @@
 .srp-gallery {
   @extend .orbit;
 
+  .orbit-controls button {
+    color: $blue;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+  }
   ul {
     @extend .orbit-container;
 
@@ -10,11 +18,14 @@
       figure {
         @extend .orbit-figure;
 
+        text-align: center;
+
         img {
           @extend .orbit-image;
 
           height: auto;
-          width: 100%;
+          width: auto;
+          max-height: 400px;
         }
 
         figcaption {
