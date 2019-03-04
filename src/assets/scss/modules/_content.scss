@@ -403,6 +403,10 @@ h2 {
 
       @extend .medium-offset-4;
 
+      h1 {
+        @include large-header;
+      }
+
       @include breakpoint(medium) {
         padding-left: map-get($grid-margin-gutters, small);
       }
@@ -428,10 +432,16 @@ h2 {
 
         &:first-of-type {
           @include sidebar-content;
+
+          @extend .small-order-2;
+          @extend .medium-order-1;
+
         }
 
         &:last-of-type {
           @include main-content;
+          @extend .small-order-1;
+          @extend .medium-order-2;
         }
       }
     }
