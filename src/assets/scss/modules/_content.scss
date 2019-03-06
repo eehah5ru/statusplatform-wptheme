@@ -205,6 +205,8 @@ body {
 //
 //
 @mixin publication-formatting {
+  overflow-wrap: break-word;
+
   a {
     text-decoration: underline;
 

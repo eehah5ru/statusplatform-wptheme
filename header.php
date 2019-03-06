@@ -22,7 +22,7 @@
 		  <?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	  <?php endif; ?>
 
-    <div class="menu-reveal reveal full" id="menuModal" data-reveal>
+    <div class="menu-reveal reveal full" id="menuModal" data-reveal data-v-offset="0" data-v-offset="0" data-h-offset="0" data-full-screen="true">
       <nav class="menu-sign">
         <a href="#" class="in-menu" data-close>
           status reasearch platform
@@ -46,12 +46,13 @@
             </nav>
 
             <nav class="bottom-links">
-              <div class="bottom-links-container">
-                <h3 class="srp-social-links"><a href="https://www.facebook.com/Status-Research-Platform-282185609116550/" target="_blank">FB</a> | <a href="https://www.youtube.com/channel/UCqk6xLP74p08ZjNYZuECHwg" target="_blank">Youtube</a></h3>                
-                <h3><a href="mailto:info@statusproject.net"><?php pll_e('Contact us'); ?></a></h3>
-                <!-- <h3><a><?php pll_e('Disclaimer'); ?></a></h3> -->
-                <h3><a href="<?php srp_the_permalink_by_path('terms-of-use'); ?>"><?php pll_e('Terms of Use'); ?></a></h3>
-              </div>
+              <h3 class="srp-social-links"><a href="https://www.facebook.com/Status-Research-Platform-282185609116550/" target="_blank">FB</a> | <a href="https://www.youtube.com/channel/UCqk6xLP74p08ZjNYZuECHwg" target="_blank">Youtube</a></h3>                
+              <h3><a href="mailto:info@statusproject.net"><?php pll_e('Contact us'); ?></a></h3>
+              <!-- <h3><a><?php pll_e('Disclaimer'); ?></a></h3> -->
+              <h3><a href="<?php srp_the_permalink_by_path('terms-of-use'); ?>"><?php pll_e('Terms of Use'); ?></a></h3>              
+              <!-- <div class="bottom-links-container">
+
+                   </div> -->
             </nav>
           </div>
         </div>
