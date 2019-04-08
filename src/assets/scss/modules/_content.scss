@@ -427,6 +427,14 @@ h2 {
 
       // padding-left: 0;
       // padding-right: 0;
+
+      figure {
+        text-align: center;
+        display: block;
+        clear: both;
+        text-align: left;
+        margin-bottom: 1rem;
+      }
     }
 
     .wp-block-columns {

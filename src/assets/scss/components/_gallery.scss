@@ -1,6 +1,8 @@
 .srp-gallery {
   @extend .orbit;
 
+  margin-bottom: 1rem;
+
   .orbit-controls button {
     color: $blue;
 
@@ -37,7 +39,6 @@
 
           font-size: 13px;
           color: #555d66;
-          margin-top: .5em;
           margin-bottom: 1em;
           padding: 0;
         }
