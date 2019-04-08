@@ -214,6 +214,44 @@ body {
       color: $blue;
       text-decoration: line-through;
     }
+
+    &.footnote-back {
+
+      position: relative;
+
+      &:hover {
+        &:after {
+          background: $blue;
+          content: "";
+          height: 1px;
+          left: 0;
+          margin-top: calc(-1px);
+          position: absolute;
+          right: 0;
+          top: 50%;
+        }
+      }
+
+
+      svg {
+        height: 16px;
+        width: auto;
+        border-bottom: 1px solid black;
+
+        &:hover {
+          border: none;
+
+          g#return-back path {
+            fill: $blue;
+          }
+        }
+
+
+      }
+    }
+
+
+
   }
 
   h2 {
