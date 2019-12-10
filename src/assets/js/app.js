@@ -15,7 +15,7 @@ import Foundation from 'foundation-sites';
 
   // create orbit wrapper before wp gallery
 $(".wp-block-gallery").each(function() {
-  $(this).prev().after('<div class="srp-gallery orbit" role="region" data-orbit=""><div class="orbit-wrapper"><div class="orbit-controls"><button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button> <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button></div></div></div>');
+  $(this).prev().after('<div class="srp-gallery orbit" role="region" data-orbit="" data-use-m-u-i="false"><div class="orbit-wrapper"><div class="orbit-controls"><button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button> <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button></div></div></div>');
 });
 
 // put wp gallery inside of the orbit wrapper
