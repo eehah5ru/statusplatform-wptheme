@@ -23,7 +23,7 @@ get_header(); ?>
       <?php get_template_part( 'template-parts/aside', 'index' ); ?>
     </aside>
 		<main class="main-content index">
-      <?php query_posts(array('category_name' => 'texts')); ?>
+      <?php query_posts(array('category_name' => 'texts', 'posts_per_page'=> -1)); ?>
 		  <?php if ( have_posts() ) : ?>
 			  <?php /* Start the Loop */ ?>
 			  <?php while ( have_posts() ) : the_post(); ?>
